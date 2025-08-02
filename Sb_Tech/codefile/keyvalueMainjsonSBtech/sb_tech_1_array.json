@@ -1,0 +1,32 @@
+{
+    "Company Info": "To\nIrillic Pvt Ltd\n#76, 10th Cross, 29th Main,\nJP Nagar 1st Phase\nBangalore - 560078",
+    "Invoice No": "SBT2020-21/029",
+    "Date": "27.08.2020",
+    "Our DC No.": "",
+    "Our Dc Date": "",
+    "Your DC No.": "",
+    "Your DC Date": "",
+    "Your P.O. No.": "PO-IA20-30018",
+    "Your P.O. Date.": "27.07.2020",
+    "Consignee GST": "Consignee GST: 29AAECI4323B1ZY",
+    "Payment Terms": "Payment Terms: Advance NEFT\nDelivery: within 3 weeks",
+    "Amount Chargeable (in words)": "Rupees Fifty Two Thousand Eight Hundred and Sixty Four only",
+    "Items": [
+        {
+            "Sl": "1",
+            "Description": "Populated Printed circuit Board 85177010\nPart No.: BCB V-1.0\nItem:Blower Unit( Sanyo Fan Ref: PO-IA20-30004 Dt.06.07.20)\nSl. No.295 to 310",
+            "HSN/SAC": "",
+            "Rate": "2800.00",
+            "Amount": "44800.00"
+        }
+    ],
+    "Taxes": [
+        {
+            "Type": "IGST 18%",
+            "Rate": "",
+            "Amount": "0.00"
+        }
+    ],
+    "Total Amount": "52864.00",
+    "Authorised Signatory": ""
+}

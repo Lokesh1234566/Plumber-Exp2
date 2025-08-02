@@ -1,0 +1,54 @@
+{
+    "Company Info": "Vasanth and Co\nChartered Accountants\nNo.37/E,New No.12 &13,\nFirst Floor,South End Road,\nBengaluru-560004\nTel-080-41692944/ 41692945\nWww.Vaco-Ca.Com",
+    "GSTIN/UIN": "29AAGFV5352E1Z0",
+    "State Name": "Karnataka, Code : 29",
+    "E-Mail": "Vasanth@vaco-ca.com",
+    "Buyer Info": "Buyer\nIRILLIC PRIVATE LIMITED\nNo 76, 10th Cross, 29th Main, 1st Phase, J.P.\nNagar, Bengaluru -560078\nGSTIN/UIN : 29AAECI4323B1ZY\nState Name : Karnataka, Code : 29\nPlace of Supply : Karnataka",
+    "Invoice No": "1350/20-21",
+    "Invoice Dated": "\n13-Mar-2021",
+    "Delivery Note": "",
+    "Mode/Terms of Payment": "15 Days",
+    "Supplier’s Ref.": "1350/20-21",
+    "Other Reference(s)": "",
+    "Buyer's Order No.": "",
+    "Dated": "",
+    "Despatch Document No.": "",
+    "Delivery Note Date": "",
+    "Despatched through": "",
+    "Destination": "",
+    "Terms Of Delivery": "",
+    "Items": [
+        {
+            "Sl": "1",
+            "Description": "Professional Fee For Filing of ROC Annual Returns For the Financial Year 2019-20",
+            "HSN/SAC": "998221",
+            "Rate": "",
+            "Amount": "6,000.00"
+        },
+        {
+            "Sl": "2",
+            "Description": "Reimbursement of Expenses-Pure Agent As Per ROC Payment Challans Enclosed",
+            "HSN/SAC": "",
+            "Rate": "",
+            "Amount": "2,800.00"
+        }
+    ],
+    "Taxes": [
+        {
+            "Type": "CGST",
+            "Rate": "9",
+            "Amount": "540.00"
+        },
+        {
+            "Type": "SGST",
+            "Rate": "9",
+            "Amount": "540.00"
+        }
+    ],
+    "Total": "₹ 9,880.00",
+    "Amount Chargeable (in words)": "Indian Rupees Nine Thousand Eight Hundred Eighty",
+    "Bank Name": "State Bank of India",
+    "Bank A/c No.": "30258424387",
+    "Branch & IFS Code": "Basavanagudi & SBIN0003357",
+    "Authorised Signatory": "Authorised Signatory"
+}

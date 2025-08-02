@@ -1,0 +1,135 @@
+[
+    {
+        "page_number": 1,
+        "tables": [
+            [
+                [
+                    "To\nIrillic Pvt Ltd\n#76, 10th Cross, 29th Main,\nJP Nagar 1st Phase\nBangalore - 560078",
+                    null,
+                    null,
+                    "Invoice No.",
+                    "SBT2020-21/029",
+                    "Date",
+                    "27.08.2020"
+                ],
+                [
+                    null,
+                    null,
+                    null,
+                    "",
+                    "",
+                    "",
+                    null
+                ],
+                [
+                    null,
+                    null,
+                    null,
+                    "Our DC No.",
+                    "",
+                    "Date",
+                    null
+                ],
+                [
+                    null,
+                    null,
+                    null,
+                    "Your DC No.",
+                    "",
+                    "Date",
+                    null
+                ],
+                [
+                    null,
+                    null,
+                    null,
+                    "Your P.O. No.",
+                    "PO-IA20-30018",
+                    "Date",
+                    "27.07.2020"
+                ],
+                [
+                    "Consignee GST: 29AAECI4323B1ZY",
+                    null,
+                    null,
+                    "Payment Terms: Advance NEFT\nDelivery: within 3 weeks",
+                    null,
+                    null,
+                    null
+                ],
+                [
+                    "Sl. No.",
+                    "Description",
+                    null,
+                    "HSN/ SAC\nCode",
+                    "Quantity\nin Nos.",
+                    "Unit Price\nin Rs.",
+                    "Amount\nin Rs."
+                ],
+                [
+                    "1",
+                    "Populated Printed circuit Board 85177010\nPart No.: BCB V-1.0\nItem:Blower Unit( Sanyo Fan Ref: PO-IA20-30004 Dt.06.07.20)\nSl. No.295 to 310",
+                    null,
+                    null,
+                    "16",
+                    "2800.00",
+                    "44800.00"
+                ],
+                [
+                    "IN WORDS",
+                    null,
+                    null,
+                    null,
+                    null,
+                    "TOTAL",
+                    "44800.00"
+                ],
+                [
+                    "CGST 9%",
+                    null,
+                    "",
+                    null,
+                    null,
+                    "",
+                    "4032.00"
+                ],
+                [
+                    "SGST 9%",
+                    null,
+                    "",
+                    null,
+                    null,
+                    "",
+                    "4032.00"
+                ],
+                [
+                    "IGST 18%",
+                    null,
+                    "",
+                    null,
+                    null,
+                    "",
+                    "0.00"
+                ],
+                [
+                    "TOTAL INVOICE VALUE",
+                    null,
+                    "Rupees Fifty Two Thousand Eight Hundred and Sixty Four only",
+                    null,
+                    null,
+                    "",
+                    "52864.00"
+                ],
+                [
+                    "Certified that the particulars given above are true and correct and the amount indicated represents the price actually charged and that there\nis no flow of additional consideration directly or indirectly from the buyer\nInterest at 21% p.a. will be charged if the payment is not made within the stipulated time.\nAny discrepancy in the invoice must be intimated immediately.\nGoods Acceptance/Rejection report must be sent within 7 days, otherwise the same will be treated as Accepted.",
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ]
+            ]
+        ]
+    }
+]

@@ -1,0 +1,112 @@
+{
+    "Company Info": "3DE TECHNOLOGY PROTOTYPE SOLUTIONS Pvt Ltd\nNo.5,SF No.16/2A1 SIDCO Industrial Estate,\nNear Ashok Leyland Unit-I\nZuzuvadi Sipcot-1\nHosur-635126.",
+    "GSTIN/UIN": "33AABCZ2737P1ZW",
+    "State Name": "Tamil Nadu, Code : 33",
+    "E-Mail": "accounts@3dtechproto.com",
+    "Buyer Info": "Irillic Pvt Ltd\n#76,29th Main 10th Cross\n1st Phase ,J.P Nagar\nBangalore",
+    "Buyer GSTIN/UIN": "29AAECI4323B1ZY",
+    "Buyer State Name": "Karnataka, Code : 29",
+    "Invoice No.": "3D/IV/20-21/0088",
+    "Delivery Note": "",
+    "Supplier’s Ref.": "",
+    "Buyer’s Order No.": "PO-IA20-3007",
+    "Despatch Document No.": "",
+    "Despatched through": "",
+    "Items": [
+        {
+            "Sl": "1",
+            "Description of Goods": "Supply of Prototype Parts Fan Clamp AIICATPart",
+            "HSN/SAC": "39269099",
+            "GST Rate": "18 %",
+            "Quantity": "10 Nos.",
+            "Rate": "135.00",
+            "per": "Nos.",
+            "Amount": "1,350.00"
+        },
+        {
+            "Sl": "2",
+            "Description of Goods": "Fan Clamp AIICATPart Supply of Prototype Parts",
+            "HSN/SAC": "39269099",
+            "GST Rate": "18 %",
+            "Quantity": "10 Nos.",
+            "Rate": "260.00",
+            "per": "Nos.",
+            "Amount": "2,600.00"
+        },
+        {
+            "Sl": "3",
+            "Description of Goods": "Supply of Prototype Parts Flex Seal AIICATPart",
+            "HSN/SAC": "39269099",
+            "GST Rate": "18 %",
+            "Quantity": "10 Nos.",
+            "Rate": "745.00",
+            "per": "Nos.",
+            "Amount": "7,450.00"
+        },
+        {
+            "Sl": "4",
+            "Description of Goods": "Flex Seal AIICATPart Supply of Prototype Parts",
+            "HSN/SAC": "39269099",
+            "GST Rate": "18 %",
+            "Quantity": "10 Nos.",
+            "Rate": "320.00",
+            "per": "Nos.",
+            "Amount": "3,200.00"
+        },
+        {
+            "Sl": "5",
+            "Description of Goods": "Supply of Prototype Parts Front Cover 1 AIICAT Part",
+            "HSN/SAC": "39269099",
+            "GST Rate": "18 %",
+            "Quantity": "10 Nos.",
+            "Rate": "370.00",
+            "per": "Nos.",
+            "Amount": "3,700.00"
+        },
+        {
+            "Sl": "6",
+            "Description of Goods": "Front Cover 1 AIICAT Part Supply of Prototype Parts",
+            "HSN/SAC": "39269099",
+            "GST Rate": "18 %",
+            "Quantity": "10 Nos.",
+            "Rate": "810.00",
+            "per": "Nos.",
+            "Amount": "8,100.00"
+        },
+        {
+            "Sl": "7",
+            "Description of Goods": "Supply of Prototype Parts Outlet Pipe",
+            "HSN/SAC": "39269099",
+            "GST Rate": "18 %",
+            "Quantity": "10 Nos.",
+            "Rate": "624.00",
+            "per": "Nos.",
+            "Amount": "6,240.00"
+        },
+        {
+            "Sl": "8",
+            "Description of Goods": "Outlet Pipe Supply of Prototype Parts",
+            "HSN/SAC": "39269099",
+            "GST Rate": "18 %",
+            "Quantity": "10 Nos.",
+            "Rate": "414.00",
+            "per": "Nos.",
+            "Amount": "4,140.00"
+        },
+        {
+            "Sl": "9",
+            "Description of Goods": "Supply of Prototype Parts Filter Module AIICATPart",
+            "HSN/SAC": "39269099",
+            "GST Rate": "18 %",
+            "Quantity": "10 Nos.",
+            "Rate": "336.00",
+            "per": "Nos.",
+            "Amount": "3,360.00"
+        }
+    ],
+    "Footer Info": {
+        "Amount Chargeable (in words) E. & O.E": "INR Forty Seven Thousand Three Hundred Sixty Five Only",
+        "Tax Amount (in words)": "INR Seven Thousand Two Hundred Twenty Five and Twenty paise Only\nCompany’s Bank Details\nBank Name :Indian Bank\nA/c No. :6695606641\nBranch & IFS Code :Zuzuvadi, Hosur & IDIB000Z001\nDeclaration for 3DE TECHNOLOGY PROTOTYPE SOLUTIONS Pvt Ltd\nWe declare that this invoice shows the actual price of the\ngoods described and that all particulars are true and correct.\nAuthorised Signatory",
+        "Authorised Signatory": "for 3DE TECHNOLOGY PROTOTYPE SOLUTIONS Pvt Ltd\nAuthorised Signatory"
+    }
+}
