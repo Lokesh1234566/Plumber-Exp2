@@ -12,8 +12,8 @@
     "Buyer’s Order No.": "PO-IA20-3007",
     "Despatch Document No.": "",
     "Despatched through": "",
-    "Destination": "",
-    "Terms of Delivery": "",
+    "Destination": "123456 ",
+    "Terms of Delivery": "789456 ",
     "Items": [
         {
             "Sl": "1",

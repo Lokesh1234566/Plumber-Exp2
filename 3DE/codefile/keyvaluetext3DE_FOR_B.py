@@ -1,21 +1,22 @@
 import json
-import os
+import ThreeDConstants
 
 # ------------------------------
 # Load JSON File
 # ------------------------------
-input_file_path = '../arrayjson/B_array.json'
-with open(input_file_path, 'r', encoding='utf-8') as f:
+with open('../arrayjson/Bedit_array.json', 'r', encoding='utf-8') as f:
     data = json.load(f)
 
 result = {}
-file_read = open("../mdfile/B.md", "r")
+file_read = open("../mdfile/Bedit.md", "r")
 
     # asking the user to enter the string to be 
     # searched
 text="Destination"
+lengthofdestination = 11
 textNextLineDestinationShouldNotBe="Terms"
 textNextLine=""
+
 destinationValue=""
 lines = file_read.readlines()
 line_count = len(lines)
@@ -29,13 +30,19 @@ for line in lines:
         # of that line and put the
         # line into newly created list 
         if text in line:
-          
+        #   see if value beside destination ,Destination 123456
+            if(len(line.strip() )> 11):
+                print(line)
+                s1=line.replace("Destination","")
+                destinationValue =s1
+                print(destinationValue)
+        
             print ("Line No %d - %s" % (idx, line))   
             if idx<line_count-1:   
              next_line = lines[idx + 1]
             print ("Next Line No %d - %s" % (idx+1, next_line))
             if  textNextLineDestinationShouldNotBe not in next_line:
-             destinationValue=str(next_line)
+             destinationValue+=str(next_line)
              print ("destinationValue" + destinationValue.strip())
            
             break
@@ -103,11 +110,12 @@ for line in company_lines:
     elif line:
         result.setdefault("Company Info", []).append(line)
 
-for line in buyer_lines:
+for line in buyer_lines:   
     key, value = extract_key_value_from_line(line)
+    
     if key and value:
         result[f"Buyer {key}"] = value
-    elif line:
+    elif line:        
         result.setdefault("Buyer Info", []).append(line)
 
 for k in ["Company Info", "Buyer Info"]:
@@ -117,8 +125,10 @@ for k in ["Company Info", "Buyer Info"]:
 # ------------------------------
 # Extract Key-Value Pairs in Column 5
 # ------------------------------
+table = data[0]['tables'][0]
 table_rows = data[0]['tables'][0]
 for row in table_rows:
+    #print("table row" + str(row))
     if len(row) > 4 and row[4]:
         cell = row[4]
         if '\n' in cell:
@@ -128,17 +138,24 @@ for row in table_rows:
             result[key] = value
         else:
             result[cell.strip()] = ""
-            
+
+
+
+
+
 result["Destination"] = destinationValue.replace("\n", " ")
 result["Terms of Delivery"] = termsofDeliveryValue.replace("\n", " ")
-
 # ------------------------------
 # Extract and Merge Item Rows
 # ------------------------------
 item_rows = []
 header_row = None
 start_idx = None
+rows = table
+i = 8  # Start from items header
 
+
+# Find header row
 for idx, row in enumerate(table_rows):
     if row and any("Description of Goods" in str(cell) for cell in row):
         header_row = row
@@ -151,8 +168,8 @@ if header_row and start_idx is not None:
     split_columns = [cell.split("\n") if cell else [] for cell in data_row]
     max_len = max(len(col) for col in split_columns)
 
-    for i in range(0, max_len - 1, 2):
-        for j in range(2):
+    for i in range(0, max_len - 1, 2):  # Step every 2 lines
+        for j in range(2):  # Handle 2 entries per pair
             item = {}
             for col_idx, col_values in enumerate(split_columns):
                 key = headers[col_idx]
@@ -171,82 +188,43 @@ if header_row and start_idx is not None:
             if item.get("Sl") and item.get("Description of Goods"):
                 item_rows.append(item)
 
+# Add to result
 if item_rows:
     result["Items"] = item_rows
 
 # ------------------------------
-# Extract Footer Details as Structured Key-Value Pairs (Page 2)
-# ------------------------------
-footer_info = {}
-bank_details = {}
-buffer = []
-current_section = None
-
-page2_tables = data[1]["tables"][0]
-
-for row in page2_tables:
-    for cell in row:
-        if cell and isinstance(cell, str):
-            text = cell.strip()
-
-            if text.startswith("Amount Chargeable"):
-                if "\n" in text:
-                    key, val = text.split("\n", 1)
-                    footer_info["Amount Chargeable (in words)"] = val.strip()
-
-            elif text.startswith("Tax Amount (in words)"):
-                if ":" in text:
-                    key, val = text.split(":", 1)
-                    footer_info["Tax Amount (in words)"] = val.strip()
-
-            elif text.startswith("Bank Name"):
-                key, val = text.split(":", 1)
-                bank_details["Bank Name"] = val.strip()
-
-            elif text.startswith("A/c No."):
-                key, val = text.split(":", 1)
-                bank_details["A/c No."] = val.strip()
-
-            elif text.startswith("Branch & IFS Code"):
-                key, val = text.split(":", 1)
-                bank_details["Branch & IFS Code"] = val.strip()
-
-            elif text.startswith("Declaration for"):
-                current_section = "Declaration"
-                buffer = []
-
-            elif "Authorised Signatory" in text:
-                if current_section == "Declaration" and buffer:
-                    footer_info["Declaration"] = " ".join(buffer).strip()
-                    current_section = None
-                footer_info["Authorised Signatory"] = text.replace("Authorised Signatory", "").strip()
-
-            elif current_section == "Declaration":
-                buffer.append(text)
-
-if bank_details:
-    footer_info["Bank Details"] = bank_details
-
-if footer_info:
-    result["Footer Info"] = footer_info
-
-# ------------------------------
 # Clean and Output Result
 # ------------------------------
-result = json.loads(json.dumps(result).replace('(cid:299)', '').replace('\u2122', "'"))
 
 # ------------------------------
-# Save Output to Folder: keyvalue3de_A
+# Footer: Amount in Words & Bank
 # ------------------------------
-output_dir = "../keyvalue3de_A"
-os.makedirs(output_dir, exist_ok=True)
+footer_row = table[-2][0] if table[-2] and table[-2][0] else ""
+lines = footer_row.split("\n")
 
-input_filename = os.path.basename(input_file_path)
-output_filename = os.path.splitext(input_filename)[0] + "_output.json"
-output_file_path = os.path.join(output_dir, output_filename)
+for line in lines:
+    if ThreeDConstants.Constant_Amount_Chargeable in line or ThreeDConstants.Constant_IndianRupees in line:
+        result[ThreeDConstants.Constant_Amount_ChargeableInWords] = line.replace(ThreeDConstants.Constant_Amount_EOE, "").strip()
+    elif ThreeDConstants.Constant_BankName in line:
+        result[ThreeDConstants.Constant_BankName] = line.split(":", 1)[1].strip()
+    elif ThreeDConstants.COnstant_Account_no in line:
+        result[ThreeDConstants.Constant_BankACNo] = line.split(":", 1)[1].strip()
+    elif ThreeDConstants.Constant_IFS_Code in line:
+        result[ThreeDConstants.Constant_Branch_IFS_Code] = line.split(":", 1)[1].strip()
 
-with open(output_file_path, "w", encoding="utf-8") as out_file:
-    json.dump(result, out_file, indent=4, ensure_ascii=False)
+# ------------------------------
+# Authorised Signatory
+# ------------------------------
+sign_line = table[-1][3]
+if sign_line and isinstance(sign_line, str):
+    lines = sign_line.split("\n")
+    result[ThreeDConstants.Constant_Authorised_Signatory] = lines[-1].strip()
 
-# Optional: print result
-print(json.dumps(result, indent=4))
+# ------------------------------
+# Clean and Save JSON
+# ------------------------------
+result = json.loads(json.dumps(result).replace(ThreeDConstants.Constant_cid299, '').replace(ThreeDConstants.Constant_u2122, "'"))
+
+# Print JSON
+print(json.dumps(result, indent=4, ensure_ascii=False))
+

@@ -4,12 +4,12 @@ import os
 # ------------------------------
 # Load JSON File
 # ------------------------------
-input_file_path = '../arrayjson/B_array.json'
+input_file_path = '../pdf/Aedit.json'
 with open(input_file_path, 'r', encoding='utf-8') as f:
     data = json.load(f)
 
 result = {}
-file_read = open("../mdfile/B.md", "r")
+file_read = open("../mdfile/Aedit.md", "r")
 
     # asking the user to enter the string to be 
     # searched

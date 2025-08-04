@@ -2,8 +2,8 @@ import pdfplumber
 import json 
 
 
-pdf_path = "../pdf/A.pdf"
-output_json_path = "../pdf/A_array.json"
+pdf_path = "../pdf/Bedit.pdf"
+output_json_path = "../pdf/Bedit_array.json"
 
 extracted_tables = []
 
