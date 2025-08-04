@@ -1,0 +1,249 @@
+[
+    {
+        "page_number": 1,
+        "tables": [
+            [
+                [
+                    "Vasanth and Co\nChartered Accountants\nNo.37/E,New No.12 &13,\nFirst Floor,South End Road,\nBengaluru-560004\nTel-080-41692944/ 41692945\nWww.Vaco-Ca.Com\nGSTIN/UIN: 29AAGFV5352E1Z0\nState Name : Karnataka, Code : 29\nE-Mail : Vasanth@vaco-ca.com",
+                    null,
+                    null,
+                    null,
+                    "Invoice No. e-Way Bill No.\n1350/20-21",
+                    null,
+                    null,
+                    "Dated\n13-Mar-2021",
+                    null,
+                    null
+                ],
+                [
+                    null,
+                    null,
+                    null,
+                    null,
+                    "Delivery Note\n12345",
+                    null,
+                    null,
+                    "Mode/Terms of Payment\n15 Days",
+                    null,
+                    null
+                ],
+                [
+                    null,
+                    null,
+                    null,
+                    null,
+                    "Supplier's Ref.\n1350/20-21",
+                    null,
+                    null,
+                    "Other Reference(s)\n45678",
+                    null,
+                    null
+                ],
+                [
+                    "Buyer\nIRILLIC PRIVATE LIMITED\nNo 76, 10th Cross, 29th Main, 1st Phase, J.P.\nNagar, Bengaluru -560078\nGSTIN/UIN : 29AAECI4323B1ZY\nState Name : Karnataka, Code : 29\nPlace of Supply : Karnataka",
+                    null,
+                    null,
+                    null,
+                    "Buyer's Order No.\n98745",
+                    null,
+                    null,
+                    "Dated\n13-Mar-2021",
+                    null,
+                    null
+                ],
+                [
+                    null,
+                    null,
+                    null,
+                    null,
+                    "Despatch Document No.\n7457",
+                    null,
+                    null,
+                    "Delivery Note Date\n14-Mar-2021",
+                    null,
+                    null
+                ],
+                [
+                    null,
+                    null,
+                    null,
+                    null,
+                    "Despatched through\ncustomer",
+                    null,
+                    null,
+                    "Destination\nBangalore",
+                    null,
+                    null
+                ],
+                [
+                    null,
+                    null,
+                    null,
+                    null,
+                    "Terms of Delivery\nSome Things",
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                [
+                    "Sl\nNo.",
+                    "Particulars",
+                    null,
+                    null,
+                    null,
+                    "HSN/SAC",
+                    "Rate",
+                    null,
+                    "per",
+                    "Amount"
+                ],
+                [
+                    "",
+                    "",
+                    null,
+                    null,
+                    null,
+                    "",
+                    "",
+                    null,
+                    "",
+                    ""
+                ],
+                [
+                    "1",
+                    "",
+                    "Professional Fee",
+                    null,
+                    null,
+                    "998221",
+                    "",
+                    null,
+                    "",
+                    "6,000.00"
+                ],
+                [
+                    "",
+                    "",
+                    "For Filing of ROC Annual Returns",
+                    null,
+                    null,
+                    "",
+                    "",
+                    null,
+                    "",
+                    ""
+                ],
+                [
+                    "",
+                    "",
+                    "For the Financial Year 2019-20",
+                    null,
+                    null,
+                    "",
+                    "",
+                    null,
+                    "",
+                    ""
+                ],
+                [
+                    "2",
+                    "",
+                    "Reimbursement of Expenses-Pure Agent",
+                    null,
+                    null,
+                    "",
+                    "",
+                    null,
+                    "",
+                    "2,800.00"
+                ],
+                [
+                    "",
+                    "",
+                    "As Per ROC Payment Challans Enclosed",
+                    null,
+                    null,
+                    "",
+                    "",
+                    null,
+                    "",
+                    ""
+                ],
+                [
+                    "3",
+                    "",
+                    "CGST",
+                    null,
+                    null,
+                    "",
+                    "9",
+                    null,
+                    "%",
+                    "540.00"
+                ],
+                [
+                    "4",
+                    "",
+                    "SGST",
+                    null,
+                    null,
+                    "",
+                    "9",
+                    null,
+                    "%",
+                    "540.00"
+                ],
+                [
+                    "",
+                    "",
+                    null,
+                    null,
+                    null,
+                    "",
+                    "",
+                    null,
+                    "",
+                    ""
+                ],
+                [
+                    "",
+                    "Total",
+                    null,
+                    null,
+                    null,
+                    "",
+                    "",
+                    null,
+                    "",
+                    "₹ 9,880.00"
+                ],
+                [
+                    "Amount Chargeable (in words) E.& O.E\nIndian Rupees Nine Thousand Eight Hundred Eighty\nOnly\nCompany's Bank Details\nBank Name : State Bank of India\nA/c No. : 30258424387\nBranch & IFS Code: Basavanagudi & SBIN0003357\nfor Vasanth and Co\nAuthorised Signatory",
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                [
+                    null,
+                    null,
+                    null,
+                    "for Vasanth and Co\nAuthorised Signatory",
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ]
+            ]
+        ]
+    }
+]

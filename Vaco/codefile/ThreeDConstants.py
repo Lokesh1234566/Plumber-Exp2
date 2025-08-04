@@ -74,3 +74,6 @@ Constant_SBTech_Other_Ref="Other Reference(s)"
 Constant_SBTech_Amount_Chargeable="Amount Chargeable (in words)"
 Constant_SBTech_Auth_Sign="Authorised Signatory"
 Constant_SBTech_Total_Amt="Total Amount"
+
+Constant_Vaco_Dated="Dated"
+Constant_Vaco_Invoice_Dated="Invoice Dated"

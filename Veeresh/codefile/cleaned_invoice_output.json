@@ -1,0 +1,31 @@
+{
+    "Company Info": "VEERESH AGENCY\nA.B.NAGAR MUNDRAGI\nKarnataka,India",
+    "GSTIN/UIN": "29AAECI4323B1ZY",
+    "State Name": "Karnataka, Code : 29",
+    "Contact": "9900168014,9900168014",
+    "Tax Amount (in words)": "INR One Thousand Six Hundred Twenty Only",
+    "Items": [
+        {
+            "Description of Goods": "Mi Standard Charger\nCGST\nSGST",
+            "HSN/SAC": "",
+            "Quantity": "20 PIECES",
+            "Rate": "450.00",
+            "per": "PIECES",
+            "Disc. %": "",
+            "Amount": "9,000.00",
+            "Tax": "810.00",
+            "Round Off": "810.00",
+            "Sl": "1"
+        }
+    ],
+    "Total Amount": "29910,620.00",
+    "Invoice No": "125",
+    "Dated": "8-Jul-2020",
+    "Amount Chargeable (in words)": "INR Ten Thousand Six Hundred Twenty Only",
+    "Central Tax Rate": "9%",
+    "Central Tax Amount": "810.00",
+    "State Tax Rate": "9%",
+    "State Tax Amount": "810.00",
+    "Declaration": "We declare that this invoice shows the actual price of the goods described and that all particulars are true and correct.",
+    "Authorised Signatory": "for VEERESH AGENCY"
+}

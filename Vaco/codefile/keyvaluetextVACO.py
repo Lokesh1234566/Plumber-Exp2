@@ -4,7 +4,7 @@ import ThreeDConstants
 # ------------------------------
 # Load JSON File
 # ------------------------------
-input_path = '../pdf/vaco_1_array.json'  # update path as needed
+input_path = '../arrayjson/vaco_4.json'  # update path as needed
 with open(input_path, 'r', encoding='utf-8') as f:
     data = json.load(f)
 
@@ -69,14 +69,14 @@ if invoice_raw and ThreeDConstants.Constant_Invoice_No in invoice_raw:
 dated = safe_extract(0, 7)
 
 if dated and ThreeDConstants.Constant_Invoice_Dated in dated:
-    temp = dated.replace("Dated","")
+    temp = dated.replace(ThreeDConstants.Constant_Vaco_Dated,"")
     # print(temp)
     # substring_to_find = "\n"
     # if substring_to_find in temp:
     #     result[ThreeDConstants.Constant_Invoice_Dated] = str(temp)  
     # else:
     #     result[ThreeDConstants.Constant_Invoice_Dated] = str(temp)
-    result["Invoice Dated"] =str(temp)
+    result[ThreeDConstants.Constant_Vaco_Invoice_Dated] =str(temp)
     
     # print(dated.replace("Dated",""))
     # parts = dated.split("\n")
