@@ -1,0 +1,36 @@
+{
+  "Company Info": "Sarayu Branding & Printing Pvt. Ltd. - (16-17) - (From 1-Apr-2017)\n#53/A,9th Cross, Opp. Aurobindo\nAshram, J.P. Nagar 1st Phase,\nBangalore 560 078.",
+  "GSTIN/UIN": "29AAECI4323B1ZY",
+  "State Name": "Karnataka, Code : 29",
+  "E-Mail": "finance@sarayus.com",
+  "Buyer Info": "Buyer\nIrillic Pvt. Ltd.\n#76, 10th Cross 29th Main, 1st Phase\nJ.P. Nagar, Bangalore 560 078.",
+  "Place of Supply": "Karnataka",
+  "Invoice No": "SBPPL/20-21/0074",
+  "Dated": "",
+  "Delivery Note": "Invoice No. Dated\nSBPPL/20-21/0074 29-May-2020\nDelivery Note Mode/Terms of Payment\nSupplier’s Ref. Other Reference(s)\nSBPPL/20-21/0074\nBuyer’s Order No. Dated\nDespatch Document No. Delivery Note Date\nDespatched through Destination\nTerms of Delivery",
+  "Supplier’s Ref.": "SBPPL/20-21/0074",
+  "Other Reference(s)": "Terms of Delivery",
+  "Buyer's Order No.": "",
+  "Destination": "",
+  "Terms of Delivery": "",
+  "Items": [
+    {
+      "Sl": "1",
+      "Description of Goods": "Posters A3 Size Poster",
+      "HSN/SAC": "49111010",
+      "GST Rate": "12 %",
+      "Quantity": "5 Nos",
+      "Rate": "25.00",
+      "per": "Nos",
+      "Amount": "125.00"
+    }
+  ],
+  "Footer Info": {
+    "Amount Chargeable (in words)": "INR One Hundred Seventy Only",
+    "Tax Amount (in words)": "INR One Hundred Seventy Only",
+    "Authorised Signatory": "for Sarayu Branding & Printing Pvt. Ltd. - (16-17) - (From 1-Apr-2017)",
+    "Bank Details": {
+      "Company’s PAN": " AAVCS8826Q"
+    }
+  }
+}

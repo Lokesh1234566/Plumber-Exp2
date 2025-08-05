@@ -1,0 +1,29 @@
+{
+    "Company Info": "VIMA3YA\n295/14 Balagaranahalli,\nHosur Main Road,\nBangalore-562107\nMSME REG.NO.KR02B0009529\nConsignee\nIrillic Pvt Ltd\n#76,29th Main,10th Cross 1st Phase, J.P.Nagar\nBangalore-560078\nBuyer (if other than consignee)\nIrillic Pvt Ltd\n#76,29th Main,10th Cross 1st Phase, J.P.Nagar\nBangalore-560078",
+    "GSTIN/UIN": "29AAECI4323B1ZY",
+    "State Name": "Karnataka, Code : 29",
+    "Contact": "9663066693",
+    "E-Mail": "info@vima3ya.com",
+    "PAN/IT No": "AAECI4323B",
+    "Place of Supply": "Karnataka",
+    "Invoice No": "0213",
+    "Items": [
+        {
+            "Sl": "1",
+            "Description": "39269099",
+            "HSN/SAC": "",
+            "Rate": "",
+            "Amount": "293.56\n9\n9"
+        },
+        {
+            "Sl": "39269099",
+            "Description": "",
+            "HSN/SAC": "9%",
+            "Rate": "",
+            "Amount": "9%"
+        }
+    ],
+    "Bank Name": "Vijaya Bank A/c No.139200301000227",
+    "Bank A/c No.": "139200301000227",
+    "Branch & IFS Code": "SSI,BANGALORE & VIJB0001392"
+}

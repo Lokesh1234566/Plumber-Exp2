@@ -1,0 +1,129 @@
+[
+    {
+        "page_number": 1,
+        "tables": [
+            [
+                [
+                    "GSTIN : 29ADKPN8626J1ZV TAX INVOICE Original copy\nBrindavan Enterprises\n46/3, 3rd Main Behind Governament School, Sarakki Main Road J.P Nagar 1st Phase, Bengaluru-560078\nPhone:080-42007347/9739517233, Email : brindavanusn@gmail.com",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                [
+                    "Invoice No. : BRINDAVAN/11854\nDate of Invoice : 24-06-2020",
+                    "",
+                    "",
+                    "",
+                    "Party's P.O No. : CASH PURCHASE\nState Code : 29",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                [
+                    "Billed to :\nIRILLIC PRIVATE LIMITED\n76, 10TH CROSS RD, JEEWAN SATHI COLONY\n1ST PHASE J.P NAGAR BANGALORE-560078\nCustomer GSTIN : 29AAECI4323B1ZY",
+                    "",
+                    "",
+                    "",
+                    "Shipped to :\nUSER NAME : MR.ASHWIN SOMAIAH\nPH : 9449853397\nCustomer Mobile No :",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                [
+                    "S.N .",
+                    "PARTICULARS",
+                    "PART NO",
+                    "",
+                    "",
+                    "HSN",
+                    "Qty.",
+                    "Unit",
+                    "Price",
+                    "Amount(`)"
+                ],
+                [
+                    "1 .\n2 .",
+                    "DIE PUNCH BOARD\nDIE",
+                    "",
+                    "",
+                    "",
+                    "3920\n4412",
+                    "1,100.00\n1.00",
+                    "NOS\nNOS",
+                    "14.500\n1,000.000",
+                    "15,950.000\n1,000.000"
+                ],
+                [
+                    "AMOUNT SUBTOTAL",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "16,950.000"
+                ],
+                [
+                    "Add : CGST @ 9.00 %\nAdd : SGST @ 9.00 %",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "1,525.50\n1,525.50"
+                ],
+                [
+                    "Grand Total ` 20,001.00\nRupees Twenty Thousand One Only",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "20,001.00"
+                ],
+                [
+                    "BANK DETAILS: SBI,J.P Nagar,IFSC: SBIN0007117, CURRENT ACC NO: 10427723793, SWIFT CODE: SBININBB423",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                [
+                    "Terms & Conditions\nE.& O.E.\n1. Goods once sold will not be taken back.\n2. Subject to 'Karnataka' Jurisdiction only.",
+                    "",
+                    "",
+                    "For Brindavan Enterprises\nAuthorised Signatory",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ]
+            ]
+        ]
+    }
+]

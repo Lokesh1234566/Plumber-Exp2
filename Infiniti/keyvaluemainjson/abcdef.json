@@ -32,21 +32,11 @@
   "Items": [
     {
       "type": "service",
-      "description": "RENTAL OF LAPTOP 84713010 1 NOS. 2,950.00 NOS. 2,950.00 LENOVO THINKPAD T440 CORE I5 8GB RAM 256GB SSD HDD WITH ADAPTER S/N:PF-04KWB1 FROM 26/09/2020 TO 25/10/2020 8,850.00",
+      "description": "RENTAL OF LAPTOP DELL LATITUDE7440 LAPTOP CORE I5 8GB RAM 500GB HDD WITH ADAPTER Bag S/N:9QRHT12 FROM 11/10/2020 TO 10/11/2020 RENTAL OF LAPTOP LENOVO THINKPAD T440 CORE I5 8GB RAM 256GB SSD HDD WITH ADAPTER S/N:PF-04KEVA FROM 23/09/2020 TO 22/10/2020",
       "hsn": "",
-      "rate": "",
-      "amount": "8850.00",
+      "rate": "2,950.00",
+      "amount": "",
       "quantity": ""
-    },
-    {
-      "type": "sgst",
-      "rate": "9%",
-      "amount": "796.50"
-    },
-    {
-      "type": "cgst",
-      "rate": "9%",
-      "amount": "796.50"
     },
     {
       "type": "tax_detail",

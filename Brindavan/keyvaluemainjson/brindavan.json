@@ -1,0 +1,29 @@
+{
+  "Company Info": {
+    "GSTIN": "GSTIN : 29ADKPN8626J1ZV TAX INVOICE Original copy",
+    "Name": "Brindavan Enterprises",
+    "Address": "46/3, 3rd Main Behind Governament School, Sarakki Main Road J.P Nagar 1st Phase, Bengaluru-560078\nPhone:080-42007347/9739517233, Email : brindavanusn@gmail.com"
+  },
+  "Buyer Info": {},
+  "Invoice No": " BRINDAVAN/11854",
+  "Date of Invoice": " 24-06-2020",
+  "Party's P.O No.": " CASH PURCHASE",
+  "State Code": " 29",
+  "Billed To": "IRILLIC PRIVATE LIMITED76, 10TH CROSS RD, JEEWAN SATHI COLONY1ST PHASE J.P NAGAR BANGALORE-560078",
+  "Customer GSTIN": " 29AAECI4323B1ZY",
+  "Shipped To": "USER NAME : MR.ASHWIN SOMAIAHPH : 9449853397",
+  "Customer Mobile Number": "",
+  "Items": [
+    {
+      "type": "service",
+      "description": "1 . 2 .",
+      "hsn": "",
+      "rate": "NOS",
+      "amount": "",
+      "quantity": ""
+    }
+  ],
+  "Footer Info": {
+    "Authorised Signatory": "For Brindavan Enterprises"
+  }
+}

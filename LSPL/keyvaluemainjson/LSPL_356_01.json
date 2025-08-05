@@ -1,0 +1,53 @@
+{
+  "Company Info": "Ledger Services Private Limited\nNo.G-001, \"South End Sampurna\" 11/94,\nModel House Street, Basavanagudi,\nBangalore - 560 004\nwww.ledger.in",
+  "Ph NO": "080-41692691",
+  "CIN": "U72300KA2006PTC041050",
+  "GSTIN/UIN": "29AAECP0779L1ZU",
+  "State Name": "Karnataka, Code : 29",
+  "Contact": "+91 80 4123 5846,+91 95357 17589",
+  "E-Mail": "info@ledger.in",
+  "Buyer Place of Supply": "Karnataka",
+  "Mode/Terms of Payment": "30 Days",
+  "Supplier’s Ref.": "LSPL/356/2021",
+  "Buyer's Order No.": "",
+  "Dated": "",
+  "Despatch Document No.": "",
+  "Delivery Note Date": "",
+  "Despatched through": "",
+  "Destination": "",
+  "Terms Of Delivery": "",
+  "Items": [
+    {
+      "Sl": "1",
+      "Description": "Accounting Services For the Month of January -2021",
+      "HSN/SAC": "998222",
+      "Rate": "",
+      "Amount": "15,000.00"
+    }
+  ],
+  "Taxes": [
+    {
+      "Type": "CGST",
+      "Rate": "9",
+      "Amount": "1,350.00"
+    },
+    {
+      "Type": "SGST",
+      "Rate": "9",
+      "Amount": "1,350.00"
+    }
+  ],
+  "Total": "₹ 17,700.00",
+  "Footer Info": {
+    "Amount Chargeable (in words)": "INR Seventeen Thousand Seven Hundred Only\nCompany's Bank Details\nBank Name : Axis Bank\nCompany's Service Tax No. : AAECP0779LST001 A/c No. : 917020079685358\nCompany's PAN : AAECP0779L Branch & IFS Code: Basavanagudi & UTIB0001496\nfor Ledger Services Private Limited\nAuthorised Signatory",
+    "Authorised Signatory": "for Ledger Services Private Limited",
+    "Bank Details": {
+      "Bank Name": "Axis Bank",
+      "Company’s Service Tax No.": " AAECP0779LST001 ",
+      "A/c No.": "917020079685358",
+      "Company’s PAN": " AAECP0779L ",
+      "Branch & IFS Code": "Basavanagudi & UTIB0001496"
+    }
+  },
+  "Authorised Signatory": "Authorised Signatory"
+}

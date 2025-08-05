@@ -1,8 +1,8 @@
 import pdfplumber
 import json
 
-pdf_path = "../pdffile/vima3ya_213 Signed_01.pdf"
-output_json_path = "../arrayjson/vima3ya_213.json"
+pdf_path = "../pdf/sarayu_74_06.pdf"
+output_json_path = "../arrayjson/sarayu_74_06.json"
 
 def replace_none_with_empty_string(obj):
     if isinstance(obj, list):
