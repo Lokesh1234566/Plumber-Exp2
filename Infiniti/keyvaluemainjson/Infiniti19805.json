@@ -1,0 +1,73 @@
+{
+  "Company Info": {
+    "Phone": "080-41505286/41481855",
+    "PAN": "AAACI5897G",
+    "GSTIN/UIN": "29AAACI5897G1Z3",
+    "State": "Karnataka",
+    "State Code": "29",
+    "Email": "contact@infinitiengineers.co.in",
+    "Name": "INFINITI ENGINEERS PRIVATE LIMITED",
+    "Address": "12/1 SURVEYOR STREET\nBASAVANAGUDI,\nBANGALORE - 560004"
+  },
+  "Buyer Info": {
+    "Name": "IRILLIC PVT LTD",
+    "Address": "# 76,10TH CROSS,29TH MAIN\nJP NAGAR 1ST PHASE\nBANGALORE-560078",
+    "GSTIN/UIN": "29AAECI4323B1ZY",
+    "State": "Karnataka",
+    "State Code": "29"
+  },
+  "Invoice No": "0198",
+  "Dated": "4-May-2020",
+  "Delivery Note": "",
+  "Mode/Terms of Payment": "",
+  "Supplierâ€™s Ref.": "0198",
+  "Other Reference(s)": "",
+  "Buyer's Order No.": "",
+  "Despatch Document No.": "",
+  "Delivery Note Date": "",
+  "Despatched through": "",
+  "Destination": "BANGALORE",
+  "Terms Of Delivery": "",
+  "Items": [
+    {
+      "type": "service",
+      "description": "RENTAL OF LAPTOP LENOVO THINKPAD T440 CORE I5 8GB RAM 256GB SSD HDD WITH ADAPTER S/N:PF-04KEVA FROM 23/02/2020 TO 22/03/2020",
+      "hsn": "84713010",
+      "rate": "2,950.00",
+      "amount": "2,950.00",
+      "quantity": ""
+    },
+    {
+      "type": "sgst",
+      "rate": "9%",
+      "amount": "265.50"
+    },
+    {
+      "type": "cgst",
+      "rate": "9%",
+      "amount": "265.50"
+    },
+    {
+      "type": "tax_detail",
+      "HSN/SAC": "84713010",
+      "taxable_value": "2,950.00",
+      "central_tax_rate": "9%",
+      "central_tax_amount": "265.50",
+      "state_tax_rate": "9%",
+      "state_tax_amount": "265.50",
+      "total_tax": "531.00"
+    }
+  ],
+  "Footer Info": {
+    "Amount Chargeable (in words)": "Indian Rupees Three Thousand Four Hundred Eighty One Only",
+    "Tax Amount (in words)": "Indian Rupees Five Hundred Thirty One Only",
+    "Authorised Signatory": "for INFINITI ENGINEERS PRIVATE LIMITED",
+    "Bank Details": {
+      "Bank Name": "VIJAYA BANK - 126100300001836",
+      "Company’s Service Tax No.": "AAACI5897GST001",
+      "A/c No.": "126100300001836",
+      "Company’s PAN": "AAACI5897G",
+      "Branch & IFS Code": "Gandhibazar & VIJB0001261"
+    }
+  }
+}

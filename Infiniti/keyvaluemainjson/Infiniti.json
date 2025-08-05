@@ -1,0 +1,73 @@
+{
+  "Company Info": {
+    "Phone": "080-41505286/41481855",
+    "PAN": "AAACI5897G",
+    "GSTIN/UIN": "29AAACI5897G1Z3",
+    "State": "Karnataka",
+    "State Code": "29",
+    "Email": "contact@infinitiengineers.co.in",
+    "Name": "INFINITI ENGINEERS PRIVATE LIMITED",
+    "Address": "12/1 SURVEYOR STREET\nBASAVANAGUDI,\nBANGALORE - 560004"
+  },
+  "Buyer Info": {
+    "Name": "IRILLIC PVT LTD",
+    "Address": "# 76,10TH CROSS,29TH MAIN\nJP NAGAR 1ST PHASE\nBANGALORE-560078",
+    "GSTIN/UIN": "29AAECI4323B1ZY",
+    "State": "Karnataka",
+    "State Code": "29"
+  },
+  "Invoice No": "1291",
+  "Dated": "19-Dec-2020",
+  "Delivery Note": "",
+  "Mode/Terms of Payment": "",
+  "Supplierâ€™s Ref.": "1291",
+  "Other Reference(s)": "",
+  "Buyer's Order No.": "",
+  "Despatch Document No.": "",
+  "Delivery Note Date": "",
+  "Despatched through": "",
+  "Destination": "Bangalore",
+  "Terms Of Delivery": "",
+  "Items": [
+    {
+      "type": "service",
+      "description": "SERVICE CHARGES For Replacement of Base Panel Mouse Pad Dell Latitude 7440 Laptop (Maintance and Repair)",
+      "hsn": "84713010",
+      "rate": "9",
+      "amount": "7,500.00",
+      "quantity": ""
+    },
+    {
+      "type": "sgst",
+      "rate": "9%",
+      "amount": "675.00"
+    },
+    {
+      "type": "cgst",
+      "rate": "9%",
+      "amount": "675.00"
+    },
+    {
+      "type": "tax_detail",
+      "HSN/SAC": "84713010",
+      "taxable_value": "7,500.00",
+      "central_tax_rate": "9%",
+      "central_tax_amount": "675.00",
+      "state_tax_rate": "9%",
+      "state_tax_amount": "675.00",
+      "total_tax": "1,350.00"
+    }
+  ],
+  "Footer Info": {
+    "Amount Chargeable (in words)": "Indian Rupees Eight Thousand Eight Hundred Fifty Only",
+    "Tax Amount (in words)": "Indian Rupees One Thousand Three Hundred Fifty Only",
+    "Authorised Signatory": "for INFINITI ENGINEERS PRIVATE LIMITED",
+    "Bank Details": {
+      "Bank Name": "BANK OF BARODA (89490200000377)",
+      "Company’s Service Tax No.": "AAACI5897GST001",
+      "A/c No.": "89490200000377",
+      "Company’s PAN": "AAACI5897G",
+      "Branch & IFS Code": "BARB0VJGABZ"
+    }
+  }
+}

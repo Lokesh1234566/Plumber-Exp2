@@ -3,7 +3,7 @@
     "Invoice No": "SBT2020-21/029",
     "Date": "27.08.2020",
     "Our DC No.": "",
-    "Our Dc Date": "",
+    "Our DC Date": "",
     "Your DC No.": "",
     "Your DC Date": "",
     "Your P.O. No.": "PO-IA20-30018",
@@ -22,11 +22,25 @@
     ],
     "Taxes": [
         {
+            "Type": "CGST 9%",
+            "Rate": "",
+            "Amount": "4032.00"
+        },
+        {
+            "Type": "SGST 9%",
+            "Rate": "",
+            "Amount": "4032.00"
+        },
+        {
             "Type": "IGST 18%",
             "Rate": "",
             "Amount": "0.00"
         }
     ],
     "Total Amount": "52864.00",
-    "Authorised Signatory": ""
+    "Seller Info": "S.B.TECHNOLOGIES, #4,9th Main, 8th Cross,J.C.Industrial Estate, Kanakapura Main Road, Yelachenahalli, Bangalore - 560 062 INDIA PH:+91 80 26662994",
+    "Seller GSTIN": "29AHLPS3265R1Z8",
+    "Authorised Signatory": "S.B.TECHNOLOGIES",
+    "Contact Info": "Bangalore - 560 062 INDIA PH:+91 80 26662994",
+    "Terms & Conditions": "Interest at 21% p.a. will be charged  if the payment  is not made within the stipulated time.\nAny discrepancy in the invoice must be intimated immediately.\nGoods Acceptance/Rejection report must be sent within 7 days, otherwise the same will be treated as Accepted."
 }

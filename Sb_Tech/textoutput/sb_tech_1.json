@@ -1,0 +1,46 @@
+{
+    "seller_details": {
+        "address": "#4,9th Main, 8th Cross,J.C.Industrial Estate, Kanakapura Main Road, Yelachenahalli,",
+        "phone": "+91 80 26662994",
+        "GSTIN": "29AHLPS3265R1Z8"
+    },
+    "buyer_details": {
+        "name": "Irillic Pvt Ltd",
+        "address": "JP Nagar 1st Phase Bangalore - 560078                     Your DC No.                 Date",
+        "GSTIN": "29AAECI4323B1ZY"
+    },
+    "invoice_details": {
+        "invoice_no": "SBT2020-21/029",
+        "invoice_date": "27.08.2020",
+        "our_dc_no": "",
+        "our_dc_date": "",
+        "your_dc_no": "",
+        "your_dc_date": "",
+        "po_number": "PO-IA20-30018",
+        "po_date": "27.07.2020",
+        "payment_terms": "",
+        "delivery": ""
+    },
+    "items": [
+        {
+            "sl_no": "1",
+            "description": "Populated Printed circuit Board                85177010        16         2800.00    44800.00"
+        }
+    ],
+    "tax_details": {
+        "cgst": 4032.0,
+        "sgst": 4032.0,
+        "igst": 0.0,
+        "total": 52864.0,
+        "amount_in_words": "Rupees Fifty Two Thousand Eight Hundred and Sixty Four only"
+    },
+    "footer_notes": [
+        "Certified that the particulars given above are true and correct and the amount indicated represents the price actually charged and that there",
+        "is no flow of additional consideration directly or indirectly from the buyer",
+        "Interest at 21% p.a. will be charged  if the payment  is not made within the stipulated time.",
+        "Any discrepancy in the invoice must be intimated immediately.",
+        "Goods Acceptance/Rejection report must be sent within 7 days, otherwise the same will be treated as Accepted.",
+        "For S.B.TECHNOLOGIES",
+        "--------------------------------------------------------------------------------"
+    ]
+}

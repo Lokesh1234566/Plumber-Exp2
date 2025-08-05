@@ -1,26 +1,32 @@
 import json
 import os
-import ThreeDConstants
-# ------------------------------
-# Load JSON File
-# ------------------------------
-input_path = '../pdf/sb_tech_1_array.json'  # Update path if needed
-with open(input_path, 'r', encoding='utf-8') as f:
+import re
+
+# --------------------------------------------
+# INPUT FILE PATHS
+# --------------------------------------------
+input_json_path = '../arrayjson/sb_tech_1.json'
+input_md_path = '../mdfile/sb_tech_1.md'
+output_folder = '../keyvalueMainjsonSBtech'
+
+# --------------------------------------------
+# LOAD JSON FILE
+# --------------------------------------------
+with open(input_json_path, 'r', encoding='utf-8') as f:
     data = json.load(f)
 
 result = {}
 
-# ------------------------------
-# Extract Company Info
-# ------------------------------
-header_block = data[0][ThreeDConstants.Constant_Tables][0][0][0]
+# --------------------------------------------
+# EXTRACT COMPANY INFO (Buyer)
+# --------------------------------------------
+header_block = data[0]["tables"][0][0][0]
 lines = header_block.split('\n')
 
 company_lines = []
 is_buyer = False
-
 for line in lines:
-    if line.strip().startswith(ThreeDConstants.Constant_Buyer):
+    if line.strip().startswith("Buyer"):
         is_buyer = True
         continue
     if is_buyer:
@@ -36,19 +42,14 @@ for line in company_lines:
     if key and value:
         result[key.strip()] = value.strip()
     elif line:
-        result.setdefault(ThreeDConstants.Constant_Company_SB, []).append(line)
+        result.setdefault("Company Info", []).append(line)
 
-result[ThreeDConstants.Constant_Company_SB] = "\n".join(result[ThreeDConstants.Constant_Company_SB])
+result["Company Info"] = "\n".join(result["Company Info"])
 
-# ------------------------------
-# Extract Buyer Info (Not present, so skipped)
-# ------------------------------
-# result["Buyer Info"] = ""  # Placeholder if needed
-
-# ------------------------------
-# Extract Invoice Meta Info
-# ------------------------------
-table = data[0][ThreeDConstants.Constant_Tables][0]
+# --------------------------------------------
+# EXTRACT TABLE METADATA
+# --------------------------------------------
+table = data[0]["tables"][0]
 
 def safe_extract(row_idx, col_idx):
     try:
@@ -57,174 +58,129 @@ def safe_extract(row_idx, col_idx):
     except IndexError:
         return ""
 
-invoice_no = safe_extract(0, 4)
-if invoice_no:
-    result[ThreeDConstants.Constant_Invoice] = invoice_no
+result["Invoice No"] = safe_extract(0, 4)
+result["Date"] = safe_extract(0, 6)
+result["Our DC No."] = safe_extract(2, 4)
+result["Our DC Date"] = safe_extract(2, 6)
+result["Your DC No."] = safe_extract(3, 4)
+result["Your DC Date"] = safe_extract(3, 6)
+result["Your P.O. No."] = safe_extract(4, 4)
+result["Your P.O. Date."] = safe_extract(4, 6)
+result["Consignee GST"] = safe_extract(5, 0)
+result["Payment Terms"] = safe_extract(5, 3)
 
-dated = safe_extract(0, 6)
-if dated:
-    result[ThreeDConstants.Constant_SBTech_Date] = dated
-    
-# other_refs = safe_extract(2, 7)
-
-# if other_refs:
-#     substring_to_find = "\n"
-#     if substring_to_find in other_refs:
-#         result[ThreeDConstants.Constant_Other_Reference] = other_refs.split("\n")[-1].strip()      
-#     else:
-#         result[ThreeDConstants.Constant_Other_Reference] = ""
-
-our_dc_no = safe_extract(2, 3)
-if our_dc_no:
-    substring_to_find = "\n"
-    if substring_to_find in our_dc_no:
-        result[ThreeDConstants.Constant_SBTech_OurDCNo] = our_dc_no.split("\n")[-1].strip()
-    else:
-        result[ThreeDConstants.Constant_SBTech_OurDCNo]=""
-        
-our_dc_date = safe_extract(2, 5)
-
-if our_dc_date:
-    substring_to_find = "\n"
-    if substring_to_find in our_dc_date:
-        result[ThreeDConstants.Constant_SBTech_OurDCDate] = our_dc_date.split("\n")[-1].strip()
-    else:
-        result[ThreeDConstants.Constant_SBTech_OurDCDate]=""
-
-your_dc_no = safe_extract(3,3)        
-if your_dc_no:
-    substring_to_find = "\n"
-    if substring_to_find in your_dc_no:
-        result[ThreeDConstants.Constant_SBTech_YourDCNo] = your_dc_no.split("\n")[-1].strip()
-    else:
-        result[ThreeDConstants.Constant_SBTech_YourDCNo]=""  
-        
-your_dc_date = safe_extract(3,5)        
-if your_dc_date:
-    substring_to_find = "\n"
-    if substring_to_find in your_dc_date:
-        result[ThreeDConstants.Constant_SBTech_YourDCDate] = your_dc_date.split("\n")[-1].strip()
-    else:
-        result[ThreeDConstants.Constant_SBTech_YourDCDate]=""
-        
-your_po_no = safe_extract(4,4)        
-if your_po_no:
-    result[ThreeDConstants.Constant_SBTech_YourPONo] = your_po_no
-    # substring_to_find = "\n"
-    # if substring_to_find in your_po_no:
-    #     result["Your P.O. No"] = your_po_no.split("\n")[-1].strip()
-    # else:
-    #     result["Your P.O. No"]=""
-        
-your_po_date = safe_extract(4,6)        
-if your_po_date:
-    result[ThreeDConstants.Constant_SBTech_YourPODate] = your_po_date
-    # substring_to_find = "\n"
-    # if substring_to_find in your_po_date:
-    #     result["Your P.O date"] = your_po_date.split("\n")[-1].strip()
-    # else:
-    #     result["Your P.O date"]=""
-    
-consignee_GST = safe_extract(5,0)        
-if consignee_GST:
-    result[ThreeDConstants.Constant_SBTech_Consignee] = consignee_GST
-    
-payment_Terms = safe_extract(5,3)        
-if payment_Terms:
-    result[ThreeDConstants.Constant_SBTech_Payment_Terms] = payment_Terms
-
-payment_terms = safe_extract(5, 0)
-if payment_terms and ThreeDConstants.Constant_SBTech_Payment_Terms in payment_terms:
-    parts = payment_terms.split(ThreeDConstants.Constant_SBTech_Payment_Terms, 1)[1].split("\n")
-    result[ThreeDConstants.Constant_SBTech_Mode_Terms_Payment] = parts[0].strip()
-
-supplier_ref = safe_extract(2, 4)
-if supplier_ref:
-    result[ThreeDConstants.Constant_SBTech_Supplier_Ref] = supplier_ref
-
-other_refs = safe_extract(3, 4)
-if other_refs:
-    result[ThreeDConstants.Constant_SBTech_Other_Ref] = other_refs
-
-# ------------------------------
-# Extract Items, Taxes, Totals
-# ------------------------------
-item_rows = []
-tax_rows = []
+# --------------------------------------------
+# EXTRACT ITEM TABLE
+# --------------------------------------------
+items = []
+taxes = []
 total_amount = ""
-
 rows = table
-i = 6  # Start from items header
+i = 6
 
 while i < len(rows):
     row = rows[i]
-    if row and row[0] and row[0].strip().isdigit():
-        sl_no = row[0].strip()
-        description = row[1].strip() if len(row) > 1 and row[1] else ""
-        hsn = row[3].strip() if len(row) > 3 and row[3] else ""
-        rate = row[5].strip() if len(row) > 5 and row[5] else ""
-        amount = row[6].strip() if len(row) > 6 and row[6] else ""
-
-        item_rows.append({
-            ThreeDConstants.Constant_Sl: sl_no,
-            ThreeDConstants.Constant_Description: description,
-            ThreeDConstants.Constant_HSN_SAC: hsn,
-            ThreeDConstants.Constant_Rate: rate,
-            ThreeDConstants.Constant_Amount: amount
+    if row and row[0].strip().isdigit():
+        items.append({
+            "Sl": row[0].strip(),
+            "Description": row[1].strip() if len(row) > 1 else "",
+            "HSN/SAC": row[3].strip() if len(row) > 3 else "",
+            "Rate": row[5].strip() if len(row) > 5 else "",
+            "Amount": row[6].strip() if len(row) > 6 else ""
         })
-        i += 1
-    elif row and any(ThreeDConstants.Constant_Total in str(cell).upper() for cell in row):
+    elif any("Total" in str(cell).upper() for cell in row):
         total_amount = row[-1].strip()
-        i += 1
-    elif row and any(ThreeDConstants.Constant_CGST in str(cell) or ThreeDConstants.Constant_SGST in str(cell) or ThreeDConstants.Constant_IGST in str(cell) for cell in row):
-        tax_type = row[0].strip()
-        amount = row[-1].strip()
-        tax_rows.append({
-            ThreeDConstants.Constant_Type: tax_type,
-            ThreeDConstants.Constant_Rate: "",  # Not explicitly mentioned
-            ThreeDConstants.Constant_Amount: amount
+    elif any(t in str(row[0]).lower() for t in ["cgst", "sgst", "igst"]):
+        taxes.append({
+            "Type": row[0].strip(),
+            "Rate": "",
+            "Amount": row[-1].strip()
         })
-        i += 1
-    elif row and any(ThreeDConstants.Constant_Invoice_Value in str(cell).upper() for cell in row):
+    elif any("INVOICE VALUE" in str(cell).upper() for cell in row):
         total_amount = row[-1].strip()
         for cell in row:
-            if ThreeDConstants.Constant_Rupees in str(cell):
-                result[ThreeDConstants.Constant_SBTech_Amount_Chargeable] = cell.strip()
-        i += 1
-    else:
-        i += 1
+            if "Rupees" in cell:
+                result["Amount Chargeable (in words)"] = cell.strip()
+    i += 1
 
-if item_rows:
-    result[ThreeDConstants.Constant_Items] = item_rows
-
-if tax_rows:
-    result[ThreeDConstants.Constant_Taxes] = tax_rows
-
+if items:
+    result["Items"] = items
+if taxes:
+    result["Taxes"] = taxes
 if total_amount:
-    result[ThreeDConstants.Constant_SBTech_Total_Amt] = total_amount
+    result["Total Amount"] = total_amount
 
-# ------------------------------
-# Footer: Could be enhanced if needed
-# ------------------------------
-# Not applicable in this file based on sample
+# --------------------------------------------
+# PARSE MARKDOWN FOR SELLER INFO, GSTIN, FOOTER
+# --------------------------------------------
+with open(input_md_path, 'r', encoding='utf-8') as f:
+    md_content = f.read()
 
-# ------------------------------
-# Authorised Signatory (Not present in this format)
-# ------------------------------
-result[ThreeDConstants.Constant_SBTech_Auth_Sign] = ""
+md_lines = [line.strip() for line in md_content.strip().splitlines() if line.strip()]
 
-# ------------------------------
-# Clean and Save JSON
-# ------------------------------
-result = json.loads(json.dumps(result).replace(ThreeDConstants.Constant_cid299, '').replace(ThreeDConstants.Constant_u2122, "'"))
+# Seller Info
+for idx, line in enumerate(md_lines):
+    if line.startswith("##") and not line.lower().startswith("## tax invoice"):
+        seller_name = line.lstrip('#').strip()
+        address_lines = []
+        for j in range(idx + 1, len(md_lines)):
+            if md_lines[j].startswith("##") or "GSTIN" in md_lines[j]:
+                break
+            address_lines.append(md_lines[j])
+        result["Seller Info"] = f"{seller_name}, " + ", ".join(address_lines)
+        break
 
-# Print JSON
-print(json.dumps(result, indent=4, ensure_ascii=False))
+# GSTIN
+gstin_match = re.search(r'\b(29[A-Z0-9]{13})\b', md_content)
+if gstin_match:
+    result["Seller GSTIN"] = gstin_match.group(1)
 
-# Save to keyvaluejson folder
-output_folder = 'keyvalueMainjsonSBtech'
+# Footer
+footer_line = next((line for line in reversed(md_lines) if line.lower().startswith("for ")), None)
+if footer_line:
+    result["Authorised Signatory"] = footer_line.replace("For", "").strip()
+
+# --------------------------------------------
+# Extract Bank Details
+# --------------------------------------------
+bank_lines = []
+for line in md_lines:
+    if re.search(r'\b(A/C|Account|Bank|IFSC|Branch)\b', line, re.IGNORECASE):
+        bank_lines.append(line)
+if bank_lines:
+    result["Bank Details"] = "\n".join(bank_lines)
+
+# --------------------------------------------
+# Extract Contact Info (from Seller section)
+# --------------------------------------------
+contact_info = []
+for line in result.get("Seller Info", "").split(','):
+    if re.search(r'[\d\+]{5,}', line) or "@" in line:
+        contact_info.append(line.strip())
+if contact_info:
+    result["Contact Info"] = ", ".join(contact_info)
+
+# --------------------------------------------
+# Extract Terms & Conditions (from bottom of md)
+# --------------------------------------------
+terms_keywords = ["interest", "payment", "discrepancy", "acceptance", "rejection", "report", "terms"]
+terms_lines = []
+for line in md_lines[-15:]:
+    if any(k in line.lower() for k in terms_keywords):
+        terms_lines.append(line)
+if terms_lines:
+    result["Terms & Conditions"] = "\n".join(terms_lines)
+
+# --------------------------------------------
+# Clean & Save JSON
+# --------------------------------------------
+result = json.loads(json.dumps(result).replace('(cid:299)', '').replace('\u2122', "'"))
+
+# Output
 os.makedirs(output_folder, exist_ok=True)
-
-output_filename = os.path.splitext(os.path.basename(input_path))[0] + '.json'
+output_filename = os.path.splitext(os.path.basename(input_json_path))[0] + '.json'
 with open(os.path.join(output_folder, output_filename), 'w', encoding='utf-8') as f:
     json.dump(result, f, indent=4, ensure_ascii=False)
+
+# Print
+print(json.dumps(result, indent=4, ensure_ascii=False))
