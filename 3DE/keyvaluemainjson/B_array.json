@@ -1,0 +1,33 @@
+{
+  "Company Info": "3DE TECHNOLOGY PROTOTYPE SOLUTIONS Pvt Ltd\nNo.5,SF No.16/2A1 SIDCO Industrial Estate,\nNear Ashok Leyland Unit-I\nZuzuvadi Sipcot-1\nHosur-635126.",
+  "GSTIN/UIN": "33AABCZ2737P1ZW",
+  "State Name": "Tamil Nadu, Code : 33",
+  "E-Mail": "accounts@3dtechproto.com",
+  "Buyer Info": "Irillic Pvt Ltd\n#76,29th Main 10th Cross\n1st Phase ,J.P Nagar\nBangalore",
+  "Buyer GSTIN/UIN": "29AAECI4323B1ZY",
+  "Buyer State Name": "Karnataka, Code : 29",
+  "Invoice No.": "3D/IV/20-21/0090",
+  "Delivery Note": "",
+  "Supplier’s Ref.": "",
+  "Buyer’s Order No.": "PO-IA20-3007",
+  "Despatch Document No.": "",
+  "Despatched through": "",
+  "Destination": "",
+  "Terms of Delivery": "",
+  "Items": [
+    {
+      "Sl": "1",
+      "Description of Goods": "Supply of Prototype Parts Outlet Pipe",
+      "HSN/SAC": "39269099",
+      "GST Rate": "18 %",
+      "Quantity": "12 Nos.",
+      "Rate": "320.00",
+      "per": "Nos.",
+      "Amount": "3,840.00"
+    }
+  ],
+  "Bank Name": "Indian Bank",
+  "Bank A/c No.": "6695606641",
+  "Branch & IFS Code": "Zuzuvadi, Hosur & IDIB000Z001",
+  "Authorised Signatory": "Authorised Signatory"
+}

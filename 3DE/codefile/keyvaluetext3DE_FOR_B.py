@@ -1,14 +1,22 @@
 import json
+from pathlib import Path
+import re
 import ThreeDConstants
+# Load Constants manually from file
+constants_path = Path("../codefile/ThreeDConstants.py")
+constants = {}
+exec(constants_path.read_text(), constants)
 
-# ------------------------------
-# Load JSON File
-# ------------------------------
-with open('../arrayjson/Bedit_array.json', 'r', encoding='utf-8') as f:
+# Load JSON data
+# --- Set input file path ---
+input_path = Path("../arrayjson/B_array.json")
+
+# --- Load JSON data ---
+with open(input_path, "r", encoding="utf-8") as f:
     data = json.load(f)
 
 result = {}
-file_read = open("../mdfile/Bedit.md", "r")
+file_read = open("../codefile/B.md", "r")
 
     # asking the user to enter the string to be 
     # searched
@@ -225,6 +233,15 @@ if sign_line and isinstance(sign_line, str):
 # ------------------------------
 result = json.loads(json.dumps(result).replace(ThreeDConstants.Constant_cid299, '').replace(ThreeDConstants.Constant_u2122, "'"))
 
-# Print JSON
-print(json.dumps(result, indent=4, ensure_ascii=False))
+
+# Output JSON
+output_dir = Path("../keyvaluemainjson")
+output_dir.mkdir(parents=True, exist_ok=True)
+
+output_file_path = output_dir / input_path.name # Uses the same filename
+
+with open(output_file_path, "w", encoding="utf-8") as f:
+    json.dump(result, f, indent=2, ensure_ascii=False)
+
+print(f"Output saved to: {output_file_path}")
 

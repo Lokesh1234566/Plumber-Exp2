@@ -1,0 +1,67 @@
+{
+    "supplier_details": {
+        "name": "3DE TECHNOLOGY PROTOTYPE SOLUTIONS Pvt Ltd",
+        "address": "No.5,SF No.16/2A1 SIDCO Industrial Estate,, Near Ashok Leyland Unit-I, Zuzuvadi Sipcot-1, Hosur-635126., GSTIN/UIN: 33AABCZ2737P1ZW",
+        "gstin_uin": "33AABCZ2737P1ZW",
+        "state_name": "Tamil Nadu",
+        "state_code": "33",
+        "email": "accounts@3dtechproto.com"
+    },
+    "buyer_details": {
+        "name": "Irillic Pvt Ltd",
+        "address": "#76,29th Main 10th Cross, 1st Phase ,J.P Nagar, Bangalore",
+        "gstin_uin": "33AABCZ2737P1ZW",
+        "state_name": "Tamil Nadu",
+        "state_code": "33"
+    },
+    "invoice_details": {
+        "Invoice No": "3D/IV/20-21/0090",
+        "Delivery Note": "",
+        "Supplier\u2019s Ref": "",
+        "Buyer\u2019s Order No": "PO-IA20-3007",
+        "Despatch Document No": "",
+        "Despatched through": "",
+        "Dated": "13-Jul-2020",
+        "Mode/Terms of Payment": "",
+        "Other Reference(s)": "3DTPS/VC000264/2020",
+        "Delivery Note Date": "",
+        "Destination": "",
+        "Terms of Delivery": ""
+    },
+    "line_items": [
+        {
+            "Sl No": "1",
+            "Description of Goods": "Supply of Prototype Parts Outlet Pipe",
+            "HSN/SAC": "39269099",
+            "Quantity": "12",
+            "Rate": "320.00",
+            "per": "Nos",
+            "Disc. %": "",
+            "Amount": "3,840.00",
+            "GST Rate": "18%"
+        }
+    ],
+    "tax_summary": {
+        "IGST Rate (%)": "18",
+        "IGST Amount": "691.20"
+    },
+    "totals": {
+        "Total Quantity": "12",
+        "Total Amount": "4,531.00"
+    },
+    "amount_chargeable_in_words": "INR Four Thousand Five Hundred Thirty One Only",
+    "hsn_summary": [
+        {
+            "HSN/SAC": "39269099",
+            "Taxable Value": "3,840.00",
+            "Integrated Tax Rate": "18%",
+            "Integrated Tax Amount": "691.20",
+            "Total Tax Amount": "691.20"
+        }
+    ],
+    "bank_details": {
+        "Bank Name": "Indian Bank",
+        "Account Number": "6695606641",
+        "Branch_IFSC": "Zuzuvadi, Hosur & IDIB000Z001"
+    }
+}

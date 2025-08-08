@@ -1,6 +1,7 @@
 import json
 from pathlib import Path
 import re
+import pdfplumber
 
 # Load Constants manually from file
 constants_path = Path("../codefile/ThreeDConstants.py")
@@ -62,7 +63,7 @@ def safe_extract(row_idx, col_idx):
         return ""  
 
 invoice_raw = safe_extract(8, 0)
-print(invoice_raw)
+# print(invoice_raw)
 if invoice_raw and "RENTAL" in invoice_raw:
     parts = invoice_raw.split("RENTAL")
     if len(parts) >= 2:
@@ -110,7 +111,7 @@ if buyer_block:
 result[constants["Constant_Buyer_Info"]] = buyer_info_structured
 
 # ----------------- Invoice Info (Dynamic) -----------------
-invoice_block = data[pagecount-1]['tables'][0][0][3]
+invoice_block = data[0]['tables'][0][0][2]
 lines = invoice_block.split('\n')
 
 invoice_info = {
@@ -167,26 +168,25 @@ result[constants["Constant_Despatched_Through"]] = invoice_info["Despatched thro
 result[constants["Constant_Destination"]] = invoice_info["Destination"]
 result[constants["Constant_TermsOfDelivery"]] = invoice_info["Terms Of Delivery"]
 
-# ----------------- Items -----------------
+# # ----------------- Items -----------------
 item_rows = []
 for page_number in range(0, pagecount):
     # print(page_number)
     for idx, row in enumerate(data[page_number]['tables'][0]):
+        # print("row",row)
         if row and any("Description of Goods" in str(cell) for cell in row):
             headers = [cell.strip().replace("\n", " ") if cell else "" for cell in row]
             data_row = data[page_number]['tables'][0][idx + 1]
-            # print(data_row)
+            # print("header row",data[page_number]['tables'][0][idx])
+            # print("data_row",data_row)
             break
 
-desc_lines = data_row[0].split("\n") if len(data_row) > 0 else []
-print(desc_lines)
-hsn = data_row[2].strip() if len(data_row) > 2 else ""
-rate_lines = data_row[7].split("\n") if len(data_row) > 7 else []
-# raw_amount = data_row[16] if len(data_row) > 16 else ""
-# amount_lines =data_row[16] if len(data_row) > 16 else ""
-# Get the current and next row after 'Description of Goods'
 data_row = data[page_number]['tables'][0][idx + 1]
 next_row = data[page_number]['tables'][0][idx + 2] if len(data[page_number]['tables'][0]) > idx + 2 else []
+desc_lines = data_row[0].split("\n") if len(data_row) > 0 else []
+# print(desc_lines)
+hsn = data_row[2].strip() if len(data_row) > 2 else ""
+rate_lines = data_row[7].split("\n") if len(data_row) > 7 else []
 
 # Extract amounts from the NEXT row's 16th column
 raw_amount = next_row[16] if len(next_row) > 16 else ""
@@ -221,8 +221,8 @@ if service_description:
     })
 
 # ----------------- Tax Detail -----------------
-for page_number in range(0, pagecount):
-    print(page_number)
+# for page_number in range(0, pagecount):
+#     print(page_number)
 for idx, row in enumerate(data[page_number]['tables'][0]):
     if row and any("Central Tax" in str(cell) for cell in row):      
         tax_data_row = data[page_number]['tables'][0][idx + 2]
@@ -240,10 +240,11 @@ for idx, row in enumerate(data[page_number]['tables'][0]):
 
 result["Items"] = item_rows
 
+
 # ----------------- Footer -----------------
 footer_info = {}
 bank_details = {}
-for row in data[0]["tables"][0]:
+for row in data[page_number]["tables"][0]:
     for cell in row:
         if cell and isinstance(cell, str):
             text = cell.strip()
@@ -294,6 +295,17 @@ if bank_details:
     footer_info["Bank Details"] = bank_details
 if footer_info:
     result["Footer Info"] = footer_info
+    
+    
+# ------------------------------------------
+# pdf_path = "../pdffile/Infiniti bill 1213_01.pdf"
+# with pdfplumber.open(pdf_path) as pdf:
+#     p=pdf.pages[1]
+#     #for p in pdf.pages:
+#     for t in p.extract_tables():
+#             for r in t:          
+#               print(r)
+#               print("**************")
 
 # Output JSON
 output_dir = Path("../keyvaluemainjson")

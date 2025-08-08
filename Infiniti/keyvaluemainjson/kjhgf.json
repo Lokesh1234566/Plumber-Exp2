@@ -1,0 +1,106 @@
+{
+  "Company Info": {
+    "Phone": "080-41505286/41481855",
+    "PAN": "AAACI5897G",
+    "GSTIN/UIN": "29AAACI5897G1Z3",
+    "State": "Karnataka",
+    "State Code": "29",
+    "Email": "contact@infinitiengineers.co.in",
+    "Name": "INFINITI ENGINEERS PRIVATE LIMITED",
+    "Address": "12/1 SURVEYOR STREET\nBASAVANAGUDI,\nBANGALORE - 560004"
+  },
+  "Date of Invoice": "PF-04KWB1\nFROM 26/09/2020 TO 25/10/2020\n8,850.00\nSGST @ 9% 9 % 796.50\nCGST @ 9% 9 % 796.50",
+  "Buyer Info": {
+    "Name": "IRILLIC PVT LTD",
+    "Address": "# 76,10TH CROSS,29TH MAIN\nJP NAGAR 1ST PHASE\nBANGALORE-560078\nVALASARAVAKKAM\nCHENNAI - 600087",
+    "GSTIN/UIN": "29AAECI4323B1ZY",
+    "State": "Karnataka",
+    "State Code": "29"
+  },
+  "Invoice No": "",
+  "Dated": "",
+  "Delivery Note": "",
+  "Mode/Terms of Payment": "",
+  "Supplierâ€™s Ref.": "",
+  "Other Reference(s)": "",
+  "Buyer's Order No.": "",
+  "Despatch Document No.": "",
+  "Delivery Note Date": "",
+  "Despatched through": "",
+  "Destination": "",
+  "Terms Of Delivery": "",
+  "Items": [
+    {
+      "type": "service",
+      "description": "RENTAL OF LAPTOP 84713010 1 NOS. 2,950.00 NOS. 2,950.00 LENOVO THINKPAD T440 CORE I5 8GB RAM 256GB SSD HDD WITH ADAPTER S/N:PF-04KWB1 FROM 26/09/2020 TO 25/10/2020 8,850.00",
+      "hsn": "",
+      "rate": "",
+      "amount": "8850.00",
+      "quantity": ""
+    },
+    {
+      "type": "sgst",
+      "rate": "9%",
+      "amount": "796.50"
+    },
+    {
+      "type": "cgst",
+      "rate": "9%",
+      "amount": "796.50"
+    },
+    {
+      "type": "tax_detail",
+      "HSN/SAC": "84713010",
+      "taxable_value": "8,850.00",
+      "central_tax_rate": "9%",
+      "central_tax_amount": "796.50",
+      "state_tax_rate": "9%",
+      "state_tax_amount": "796.50",
+      "total_tax": "1,593.00"
+    }
+  ],
+  "Items1": [
+    [
+      "RENTAL OF LAPTOP\nDELL LATITUDE7440 LAPTOP CORE I5\n8GB RAM 500GB HDD WITH ADAPTER Bag\nS/N:9QRHT12\nFROM 11/10/2020 TO 10/11/2020\nRENTAL OF LAPTOP\nLENOVO THINKPAD T440 CORE I5\n8GB RAM 256GB SSD HDD WITH ADAPTER\nS/N:PF-04KEVA\nFROM 23/09/2020 TO 22/10/2020",
+      "84713010\n84713010",
+      "",
+      "1 NOS.\n1 NOS.",
+      "2,950.00\n2,950.00",
+      "NOS.\nNOS.",
+      "",
+      "2,950.00\n2,950.00"
+    ],
+    [
+      "RENTAL OF LAPTOP 84713010 1 NOS. 2,950.00 NOS. 2,950.00\nLENOVO THINKPAD T440 CORE I5\n8GB RAM 256GB SSD HDD WITH ADAPTER\nS/N:PF-04KWB1\nFROM 26/09/2020 TO 25/10/2020\n8,850.00\nSGST @ 9% 9 % 796.50\nCGST @ 9% 9 % 796.50",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  ],
+  "Footer Info": {
+    "Amount Chargeable (in words)": "Indian Rupees Ten Thousand Four Hundred Forty Three Only",
+    "Tax Amount (in words)": "Indian Rupees One Thousand Five Hundred Ninety Three Only",
+    "Authorised Signatory": "for INFINITI ENGINEERS PRIVATE LIMITED",
+    "Bank Details": {
+      "Bank Name": "BANK OF BARODA (89490200000377)",
+      "Company’s Service Tax No.": "AAACI5897GST001",
+      "A/c No.": "89490200000377",
+      "Company’s PAN": "AAACI5897G",
+      "Branch & IFS Code": "BARB0VJGABZ"
+    }
+  }
+}

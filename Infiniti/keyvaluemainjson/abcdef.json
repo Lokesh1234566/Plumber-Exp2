@@ -17,26 +17,36 @@
     "State": "Karnataka",
     "State Code": "29"
   },
-  "Invoice No": "",
-  "Dated": "",
+  "Invoice No": "1213",
+  "Dated": "30-Nov-2020",
   "Delivery Note": "",
   "Mode/Terms of Payment": "",
-  "Supplierâ€™s Ref.": "",
+  "Supplierâ€™s Ref.": "1213",
   "Other Reference(s)": "",
   "Buyer's Order No.": "",
   "Despatch Document No.": "",
   "Delivery Note Date": "",
   "Despatched through": "",
-  "Destination": "",
+  "Destination": "BANGALORE",
   "Terms Of Delivery": "",
   "Items": [
     {
       "type": "service",
-      "description": "RENTAL OF LAPTOP DELL LATITUDE7440 LAPTOP CORE I5 8GB RAM 500GB HDD WITH ADAPTER Bag S/N:9QRHT12 FROM 11/10/2020 TO 10/11/2020 RENTAL OF LAPTOP LENOVO THINKPAD T440 CORE I5 8GB RAM 256GB SSD HDD WITH ADAPTER S/N:PF-04KEVA FROM 23/09/2020 TO 22/10/2020",
+      "description": "RENTAL OF LAPTOP 84713010 1 NOS. 2,950.00 NOS. 2,950.00 LENOVO THINKPAD T440 CORE I5 8GB RAM 256GB SSD HDD WITH ADAPTER S/N:PF-04KWB1 FROM 26/09/2020 TO 25/10/2020 8,850.00",
       "hsn": "",
-      "rate": "2,950.00",
-      "amount": "",
-      "quantity": ""
+      "rate": "",
+      "amount": "8850.00",
+      "Quantity": ""
+    },
+    {
+      "type": "sgst",
+      "rate": "9%",
+      "amount": "796.50"
+    },
+    {
+      "type": "cgst",
+      "rate": "9%",
+      "amount": "796.50"
     },
     {
       "type": "tax_detail",
@@ -48,5 +58,17 @@
       "state_tax_amount": "796.50",
       "total_tax": "1,593.00"
     }
-  ]
+  ],
+  "Footer Info": {
+    "Amount Chargeable (in words)": "Indian Rupees Ten Thousand Four Hundred Forty Three Only",
+    "Tax Amount (in words)": "Indian Rupees One Thousand Five Hundred Ninety Three Only",
+    "Authorised Signatory": "for INFINITI ENGINEERS PRIVATE LIMITED",
+    "Bank Details": {
+      "Bank Name": "BANK OF BARODA (89490200000377)",
+      "Company’s Service Tax No.": "AAACI5897GST001",
+      "A/c No.": "89490200000377",
+      "Company’s PAN": "AAACI5897G",
+      "Branch & IFS Code": "BARB0VJGABZ"
+    }
+  }
 }
