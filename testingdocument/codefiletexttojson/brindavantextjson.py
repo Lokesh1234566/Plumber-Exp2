@@ -1,61 +1,79 @@
 import re
 import json
 
-input_path = "./txtfile/brindavan_13102 - INVOICE_12.txt"  # Replace with your actual .txt path
+input_path = (
+    "../txtfile/brindavan_13102 - INVOICE_12.txt"  # Replace with your actual .txt path
+)
 
 with open(input_path, "r", encoding="utf-8") as file:
     text = file.read()
 
 lines = [line.strip() for line in text.splitlines() if line.strip()]
 
+
 # Helper
-def extract(pattern, source, default=''):
-    match = re.search(pattern, source, re.MULTILINE)
+def extract(pattern, source, default="", flags=0):
+    match = re.search(pattern, source, flags)
     return match.group(1).strip() if match else default
+
 
 # ---------------------
 # Supplier Details
 # ---------------------
 supplier_details = {
     "name": lines[0],
-    "address": ', '.join(lines[1:5]),
+    "address": ", ".join(lines[1:5]),
     "gstin_uin": extract(r"GSTIN/UIN:\s*(\S+)", text),
     "state_name": extract(r"State Name\s*:\s*(.+?),", text),
     "state_code": extract(r"Code\s*:\s*(\d+)", text),
     "contact": extract(r"Contact\s*:\s*(.+)", text),
-    "email": extract(r"E-Mail\s*:\s*(.+)", text)
+    "email": extract(r"E-Mail\s*:\s*(.+)", text),
 }
 
 # ---------------------
 # Buyer Details
 # ---------------------
-buyer_block = extract(r"Buyer\s*(.*?)GSTIN/UIN", text, default='').strip()
+# Buyer Details
+buyer_block = extract(
+    r"Buyer\s*(.*?)GSTIN/UIN", text, default="", flags=re.DOTALL
+).strip()
 buyer_lines = buyer_block.splitlines()
-buyer_address = ' '.join(line.strip() for line in buyer_lines if line.strip())
 
 buyer_details = {
-    "name": "IRILLIC PRIVATE LIMITED",
-    "address": buyer_address,
+    "name": buyer_lines[0].strip() if buyer_lines else "",
+    "address": " ".join(line.strip() for line in buyer_lines if line.strip()),
     "gstin_uin": extract(r"GSTIN/UIN \s*:\s*(\S+)", text),
 }
+
 
 # ---------------------
 # Invoice Details
 # Invoice Details
 # ---------------------
 invoice_labels = [
-    "BRINDAVAN\\13102", "Delivery Note", "Supplier's Ref.", "Buyer's Order No.",
-    "Despatch Document No.", "Despatched through", "Terms of Delivery", 
-    "Mode/Terms of Payment", "Other Reference(s)", "Dated", "Delivery Note Date", "Destination"
+    "BRINDAVAN\\13102",
+    "Delivery Note",
+    "Supplier's Ref.",
+    "Buyer's Order No.",
+    "Despatch Document No.",
+    "Despatched through",
+    "Terms of Delivery",
+    "Mode/Terms of Payment",
+    "Other Reference(s)",
+    "Dated",
+    "Delivery Note Date",
+    "Destination",
 ]
 
 # Cleaned keys for internal dictionary use
-clean_keys = [label.replace(":", "").replace("\\", "").strip() for label in invoice_labels]
+clean_keys = [
+    label.replace(":", "").replace("\\", "").strip() for label in invoice_labels
+]
 invoice_details = {label: "" for label in clean_keys}
 
 excluded_values = [
     "",  # empty
-    "Sl                Description of Goods            HSN/SAC   Part No.    Quantity     Rate     per     Amount"
+    "Sl                Description of Goods            HSN/SAC   Part No.    Quantity     Rate     per     Amount",
 ]
 
 for i in range(len(lines) - 1):
@@ -91,15 +109,17 @@ for line in lines:
         per = match.group(6)
         amount = match.group(7)
 
-        line_items.append({
-            "Description of Goods": description,
-            "HSN/SAC": hsn,
-            "Part No": part_no,
-            "Quantity": quantity,
-            "Rate": rate,
-            "per": per,
-            "Amount": amount
-        })
+        line_items.append(
+            {
+                "Description of Goods": description,
+                "HSN/SAC": hsn,
+                "Part No": part_no,
+                "Quantity": quantity,
+                "Rate": rate,
+                "per": per,
+                "Amount": amount,
+            }
+        )
 
 # ---------------------
 # Tax Summary
@@ -108,7 +128,7 @@ tax_summary = {
     "CGST Rate (%)": extract(r"Output CGST @\s*(\d+)%", text),
     "CGST Amount": extract(r"Output CGST @\s*\d+%\s+\d+ %\s+([\d,.]+)", text),
     "SGST Rate (%)": extract(r"Output SGST @\s*(\d+)%", text),
-    "SGST Amount": extract(r"Output SGST @\s*\d+%\s+\d+ %\s+([\d,.]+)", text)
+    "SGST Amount": extract(r"Output SGST @\s*\d+%\s+\d+ %\s+([\d,.]+)", text),
 }
 
 # Clean empty rates
@@ -122,15 +142,17 @@ hsn_match = re.search(
     r"(\d{6,8})\s+([\d,.]+)\s+(\d+)%\s+([\d,.]+)\s+(\d+)%\s+([\d,.]+)\s+([\d,.]+)", text
 )
 if hsn_match:
-    hsn_summary.append({
-        "HSN/SAC": hsn_match.group(1),
-        "Taxable Value": hsn_match.group(2),
-        "CGST Rate": hsn_match.group(3) + "%",
-        "CGST Amount": hsn_match.group(4),
-        "SGST Rate": hsn_match.group(5) + "%",
-        "SGST Amount": hsn_match.group(6),
-        "Total Tax Amount": hsn_match.group(7)
-    })
+    hsn_summary.append(
+        {
+            "HSN/SAC": hsn_match.group(1),
+            "Taxable Value": hsn_match.group(2),
+            "CGST Rate": hsn_match.group(3) + "%",
+            "CGST Amount": hsn_match.group(4),
+            "SGST Rate": hsn_match.group(5) + "%",
+            "SGST Amount": hsn_match.group(6),
+            "Total Tax Amount": hsn_match.group(7),
+        }
+    )
 
 # ---------------------
 # Bank Details
@@ -138,7 +160,7 @@ if hsn_match:
 bank_details = {
     "Bank Name": extract(r"Bank Name\s*:\s*(.+)", text),
     "Account Number": extract(r"A/c No\.\s*:\s*(\d+)", text),
-    "Branch & IFS Code": extract(r"Branch\s*&\s*IFS\s*Code\s*:\s*(.+)", text)
+    "Branch & IFS Code": extract(r"Branch\s*&\s*IFS\s*Code\s*:\s*(.+)", text),
 }
 
 # ---------------------
@@ -151,7 +173,7 @@ output = {
     "line_items": line_items,
     "tax_summary": tax_summary,
     "hsn_summary": hsn_summary,
-    "bank_details": bank_details
+    "bank_details": bank_details,
 }
 
 # Save to JSON
